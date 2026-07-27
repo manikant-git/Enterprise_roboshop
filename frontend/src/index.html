@@ -1,50 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Shop</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>RoboShop</title>
-
-    <link rel="stylesheet"
-          href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-    <h1>RoboShop</h1>
+    <div class="logo">
+        Enterprise Shop
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="login.html">Login</a>
+
+        <a href="register.html">Register</a>
+
+        <a href="cart.html">
+            Cart
+            <span id="cart-count">0</span>
+        </a>
+
+    </nav>
 
 </header>
 
-<main>
 
-    <section class="hero">
+<section class="hero">
 
-        <h2>Production Ready RoboShop</h2>
+    <h1>Welcome to Enterprise Shop</h1>
+
+    <p>
+        Production Ready Demo Application
+    </p>
+
+    <a class="btn" href="products.html">
+
+        Start Shopping
+
+    </a>
+
+</section>
+
+
+<section class="features">
+
+    <div class="card">
+
+        <h2>Fast Delivery</h2>
 
         <p>
-            Modern Microservices Demo
+            Reliable delivery with scalable cloud infrastructure.
         </p>
 
-        <button id="healthBtn">
-            Check Health
-        </button>
+    </div>
 
-        <p id="result"></p>
+    <div class="card">
 
-    </section>
+        <h2>Secure Payments</h2>
 
-</main>
+        <p>
+            Built for enterprise security and modern DevOps.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Cloud Native</h2>
+
+        <p>
+            Docker • Kubernetes • Helm • Terraform
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Enterprise Shop
+
+</footer>
 
 <script src="assets/js/app.js"></script>
 
 </body>
-
 </html>
