@@ -16,25 +16,19 @@ LABEL maintainer="Manikanta"
 LABEL application="roboshop-frontend"
 LABEL version="1.0.0"
 
-# Remove default nginx content
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy application
 COPY --from=builder /build/ /usr/share/nginx/html/
 
-# Copy nginx configuration
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/conf.d/ /etc/nginx/conf.d/
 
-# Create required directories
-RUN mkdir -p /var/cache/nginx \
-             /var/log/nginx \
-             /tmp/nginx \
-    && chown -R nginx:nginx \
-       /usr/share/nginx/html \
-       /var/cache/nginx \
-       /var/log/nginx \
-       /tmp/nginx
+RUN mkdir -p /var/cache/nginx /tmp/nginx
+
+RUN chown -R nginx:nginx \
+    /usr/share/nginx/html \
+    /var/cache/nginx \
+    /tmp/nginx
 
 USER nginx
 
